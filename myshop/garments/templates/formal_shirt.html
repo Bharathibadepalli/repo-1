@@ -1,0 +1,40 @@
+
+{% extends 'base.html'%}
+
+
+{% block content %}
+
+  
+<div class="container">
+  <h3>List of formalshirts</h3>
+  <table width=100% border=1>
+  {% for l in lst %}
+  <tr>
+
+  <td width=50%>
+  <h1>Name:{{l.name}}</h1> <br>
+  <img src="{{l.phOto.url}}" alt="shirtphoto" width=200 height=250/> <br>
+  </td>
+
+  <td width=50%>
+  <h2>product details</h2> <br>
+  
+  <h3>price:{{l.price}} <br>
+      s:{{l.stock}}<br>
+      a:{%  if l.avalable %} yes
+        {% else %} no  
+        {% endif %} <br>
+     c:{{l.created}} <br>
+     u:{{l.updated}} <br>
+<a href='cart{{l.id}}'>click to ADD to cart</a>
+</td>
+</h2>
+</tr>
+
+  
+
+{% endfor %}
+  
+</div>
+{% endblock %}
+

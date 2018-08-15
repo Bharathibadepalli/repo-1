@@ -1,0 +1,26 @@
+
+{% extends 'base.html'%}
+
+
+{% block content %}
+
+  
+<div class="container">
+<h1>conatct us form </h1>
+<h4> pleaase fill details </h4>
+<form name="form" action="" method="post">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit">submit</buttom>
+<br>
+<br>
+
+
+
+
+
+  
+</form>  
+</div>
+{% endblock %}
+
